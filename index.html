@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Hilton Int'l Academy — Admission Now Open</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<meta name="description" content="Global Hilton International Academy, Uruan LGA, Akwa Ibom State. Government-approved Creche, Nursery, Primary and Secondary education. Admission now open.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --green-deep:   #155A36;
+    --green-mid:    #1B6B3D;
+    --gold:         #E0A92E;
+    --gold-soft:    #F0C75E;
+    --brick:        #3E2723;
+    --brick-soft:   #6B4A3F;
+    --cream:        #F7F3E8;
+    --cream-dim:    #EFE8D8;
+    --ink:          #21221D;
+    --red:          #B43A2E;
+    --white:        #FFFFFF;
+
+    --font-display: "Fraunces", serif;
+    --font-body: "Work Sans", sans-serif;
+
+    --maxw: 1180px;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img{ max-width:100%; display:block; }
+
+  a{ color:inherit; text-decoration:none; }
+
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  h1,h2,h3{ font-family:var(--font-display); font-weight:700; line-height:1.08; }
+
+  /* ---------- Column motif (signature element) ---------- */
+  .col-divider{
+    height:34px;
+    width:100%;
+    position:relative;
+    overflow:hidden;
+    background:var(--cream);
+  }
+  .col-divider .col-row{
+    position:absolute; inset:0;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:flex-start;
+  }
+  .col-divider .col-row span{
+    width:6px; height:34px;
+    background:linear-gradient(var(--gold-soft), var(--gold));
+    border-radius:0 0 3px 3px;
+    box-shadow: 0 4px 0 -1px var(--green-mid);
+  }
+  .col-divider .col-row span::before{
+    content:"";
+    position:absolute;
+    top:0; width:14px; height:8px;
+    margin-left:-4px;
+    background:var(--gold-soft);
+    border-radius:2px;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--green-deep);
+    border-bottom:4px solid var(--gold);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 24px;
+    max-width:var(--maxw); margin:0 auto;
+  }
+  .brand{
+    display:flex; align-items:center; gap:12px;
+    color:var(--cream);
+  }
+  .crest{
+    width:48px; height:48px;
+    flex-shrink:0;
+    object-fit:contain;
+  }
+  .crest.footer-crest{ width:54px; height:54px; }
+  .brand-text{ display:flex; flex-direction:column; line-height:1.15; }
+  .brand-text strong{
+    font-family:var(--font-display); font-weight:700; font-size:17px;
+    letter-spacing:.2px;
+  }
+  .brand-text span{
+    font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--gold-soft);
+  }
+  nav.links{
+    display:flex; gap:28px;
+    font-size:14.5px; font-weight:600;
+    color:var(--cream);
+  }
+  nav.links a{ opacity:.88; transition:opacity .15s, color .15s; }
+  nav.links a:hover{ opacity:1; color:var(--gold-soft); }
+
+  .nav-cta{
+    background:var(--gold);
+    color:var(--brick);
+    font-weight:700;
+    font-size:14px;
+    padding:9px 18px;
+    border-radius:3px;
+    border:1px solid var(--gold-soft);
+  }
+  .nav-cta:hover{ background:var(--gold-soft); }
+
+  .menu-btn{
+    display:none;
+    background:none; border:none; color:var(--cream);
+    font-size:26px; cursor:pointer;
+  }
+
+  @media (max-width: 880px){
+    nav.links, .nav-cta.desktop{ display:none; }
+    .menu-btn{ display:block; }
+  }
+
+  #mobileMenu{
+    display:none;
+    background:var(--green-mid);
+    border-top:1px solid rgba(255,255,255,.15);
+  }
+  #mobileMenu.open{ display:block; }
+  #mobileMenu a{
+    display:block;
+    color:var(--cream);
+    padding:14px 24px;
+    font-weight:600;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  #mobileMenu .nav-cta{ margin:14px 24px; display:inline-block; }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    background:var(--green-deep);
+    overflow:hidden;
+  }
+  .hero-grid{
+    max-width:var(--maxw); margin:0 auto;
+    display:grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap:48px;
+    align-items:center;
+    padding:64px 24px 56px;
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    color:var(--gold-soft);
+    font-size:13px; font-weight:700;
+    letter-spacing:.14em; text-transform:uppercase;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{
+    content:""; width:22px; height:2px; background:var(--gold-soft);
+  }
+  .hero h1{
+    color:var(--cream);
+    font-size:clamp(34px, 4.6vw, 58px);
+    margin-bottom:18px;
+  }
+  .hero h1 em{
+    font-style:normal; color:var(--gold-soft);
+  }
+  .hero p.lede{
+    color:#D8E6DC;
+    font-size:17px;
+    max-width:480px;
+    margin-bottom:30px;
+  }
+  .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:34px; }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:9px;
+    font-weight:700; font-size:15px;
+    padding:14px 26px;
+    border-radius:3px;
+    border:2px solid transparent;
+    cursor:pointer;
+    transition:transform .15s, background .15s, color .15s;
+  }
+  .btn:active{ transform:translateY(1px); }
+  .btn-gold{ background:var(--gold); color:var(--brick); }
+  .btn-gold:hover{ background:var(--gold-soft); }
+  .btn-outline{ border-color:var(--gold-soft); color:var(--cream); }
+  .btn-outline:hover{ background:rgba(255,255,255,.08); }
+
+  .motto-tag{
+    display:inline-flex; align-items:center; gap:10px;
+    background:rgba(0,0,0,.18);
+    border-left:3px solid var(--gold);
+    padding:10px 16px;
+    color:var(--gold-soft);
+    font-family:var(--font-display);
+    font-style:italic;
+    font-size:14.5px;
+  }
+
+  .hero-photo{
+    position:relative;
+    border-radius:4px;
+    overflow:hidden;
+    border:6px solid var(--gold);
+    box-shadow:0 24px 50px -16px rgba(0,0,0,.55);
+  }
+  .hero-photo img{ width:100%; height:100%; object-fit:cover; aspect-ratio:4/3.3; }
+  .hero-photo .badge{
+    position:absolute; bottom:14px; left:14px;
+    background:var(--red);
+    color:var(--cream);
+    font-weight:800;
+    font-size:12.5px;
+    letter-spacing:.06em;
+    padding:7px 14px;
+    border-radius:2px;
+    text-transform:uppercase;
+  }
+
+  @media (max-width:880px){
+    .hero-grid{ grid-template-columns:1fr; padding-top:42px; }
+    .hero-photo{ order:-1; }
+  }
+
+  /* ---------- Section scaffolding ---------- */
+  section{ padding:84px 0; }
+  .section-head{ max-width:640px; margin-bottom:48px; }
+  .section-head .eyebrow{ color:var(--brick-soft); }
+  .section-head .eyebrow::before{ background:var(--brick-soft); }
+  .section-head h2{ font-size:clamp(28px,3.2vw,40px); color:var(--green-deep); }
+  .section-head p{ margin-top:14px; font-size:16px; color:#4b4b43; max-width:560px; }
+
+  .bg-cream{ background:var(--cream); }
+  .bg-dim{ background:var(--cream-dim); }
+  .bg-green{ background:var(--green-deep); color:var(--cream); }
+  .bg-green .section-head h2{ color:var(--cream); }
+  .bg-green .section-head p{ color:#CFE0D6; }
+  .bg-green .eyebrow{ color:var(--gold-soft) !important; }
+  .bg-green .eyebrow::before{ background:var(--gold-soft) !important; }
+
+  /* ---------- About ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:56px;
+    align-items:center;
+  }
+  .about-photo{
+    position:relative;
+    border-radius:3px;
+    overflow:hidden;
+  }
+  .about-photo img{ aspect-ratio:5/4; object-fit:cover; }
+  .about-photo::after{
+    content:"";
+    position:absolute; inset:0;
+    border:1px solid rgba(0,0,0,.08);
+  }
+  .about-stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-top:34px;
+  }
+  .stat{
+    background:var(--white);
+    border-top:3px solid var(--gold);
+    padding:16px 14px;
+    border-radius:2px;
+  }
+  .stat strong{
+    display:block; font-family:var(--font-display);
+    font-size:26px; color:var(--green-deep);
+  }
+  .stat span{ font-size:12.5px; color:#6a6a60; }
+
+  .about-text p{ font-size:16px; color:#3c3c34; margin-bottom:16px; }
+  .about-text .lead{ font-size:18.5px; color:var(--brick); font-weight:600; margin-bottom:18px; font-family:var(--font-display);}
+
+  @media (max-width:880px){
+    .about-grid{ grid-template-columns:1fr; }
+    .about-photo{ order:-1; }
+  }
+
+  /* ---------- Curriculum / Why choose us ---------- */
+  .feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+  }
+  .feature-card{
+    background:var(--white);
+    padding:28px 24px;
+    border-radius:3px;
+    border-left:4px solid var(--green-mid);
+  }
+  .feature-card .ico{
+    width:42px; height:42px;
+    background:var(--cream-dim);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:16px;
+    color:var(--green-deep);
+    font-size:19px;
+    font-weight:700;
+  }
+  .feature-card h3{
+    font-size:17px; margin-bottom:8px; color:var(--brick);
+    font-family:var(--font-body); font-weight:700;
+  }
+  .feature-card p{ font-size:14.5px; color:#5d5d54; }
+
+  @media (max-width:880px){
+    .feature-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:560px){
+    .feature-grid{ grid-template-columns:1fr; }
+  }
+
+  /* ---------- Curriculum list section ---------- */
+  .curric-wrap{
+    display:grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap:50px;
+    align-items:start;
+  }
+  .curric-list{ list-style:none; }
+  .curric-list li{
+    display:flex; gap:14px;
+    padding:16px 0;
+    border-bottom:1px solid rgba(255,255,255,.15);
+    font-size:16px;
+  }
+  .curric-list li .num{
+    font-family:var(--font-display);
+    color:var(--gold-soft);
+    font-weight:700;
+    font-size:15px;
+    flex-shrink:0;
+    width:26px;
+  }
+  .uniform-card{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:4px;
+    padding:22px;
+    display:flex;
+    gap:20px;
+    align-items:center;
+  }
+  .uniform-card img{ width:180px; border-radius:3px; flex-shrink:0; }
+  .uniform-card h3{ font-family:var(--font-body); font-size:15px; color:var(--gold-soft); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em;}
+  .uniform-card p{ font-size:14px; color:#D8E6DC; }
+
+  @media (max-width:880px){
+    .curric-wrap{ grid-template-columns:1fr; }
+    .uniform-card{ flex-direction:column; text-align:center; }
+    .uniform-card img{ width:160px; }
+  }
+
+  /* ---------- Admission CTA band ---------- */
+  .admission-band{
+    background:var(--gold);
+    padding:54px 0;
+  }
+  .admission-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    flex-wrap:wrap; gap:24px;
+  }
+  .admission-inner h2{
+    font-size:clamp(24px,3vw,34px);
+    color:var(--brick);
+    max-width:560px;
+  }
+  .admission-inner p{ color:#5a3f1a; margin-top:8px; font-size:15px; }
+  .btn-dark{ background:var(--brick); color:var(--cream); }
+  .btn-dark:hover{ background:#2b1a16; }
+
+  /* ---------- Gallery ---------- */
+  .gallery-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows:160px;
+    gap:10px;
+  }
+  .gallery-grid figure{
+    overflow:hidden;
+    border-radius:3px;
+    position:relative;
+    margin:0;
+  }
+  .gallery-grid img{
+    width:100%; height:100%; object-fit:cover;
+    transition:transform .4s ease;
+  }
+  .gallery-grid figure:hover img{ transform:scale(1.06); }
+  .gallery-grid figcaption{
+    position:absolute; left:0; right:0; bottom:0;
+    background:linear-gradient(transparent, rgba(0,0,0,.65));
+    color:#fff; font-size:12px; font-weight:600;
+    padding:18px 10px 8px;
+    opacity:0; transition:opacity .25s;
+  }
+  .gallery-grid figure:hover figcaption{ opacity:1; }
+
+  .g-big{ grid-column:span 2; grid-row:span 2; }
+
+  @media (max-width:880px){
+    .gallery-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:150px; }
+    .g-big{ grid-column:span 2; grid-row:span 1; }
+  }
+
+  /* ---------- Map / location ---------- */
+  .location-grid{
+    display:grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap:0;
+    border-radius:4px;
+    overflow:hidden;
+    border:1px solid rgba(0,0,0,.08);
+  }
+  .location-info{
+    background:var(--brick);
+    color:var(--cream);
+    padding:42px 34px;
+  }
+  .location-info h3{ font-family:var(--font-display); font-size:24px; margin-bottom:18px; color:var(--gold-soft); }
+  .info-row{ display:flex; gap:12px; margin-bottom:18px; font-size:15px; align-items:flex-start; }
+  .info-row .ico{ flex-shrink:0; width:20px; text-align:center; margin-top:2px; color:var(--gold-soft); font-weight:700; }
+  .location-info a{ text-decoration:underline; text-decoration-color:var(--gold-soft); }
+  .map-frame{ min-height:380px; background:#ccc; }
+  .map-frame iframe{ width:100%; height:100%; min-height:380px; border:0; display:block; }
+
+  @media (max-width:880px){
+    .location-grid{ grid-template-columns:1fr; }
+  }
+
+  /* ---------- Footer ---------- */
+  footer{ background:var(--green-deep); color:var(--cream); padding:56px 0 0; }
+  .footer-grid{
+    display:grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:40px;
+    border-bottom:1px solid rgba(255,255,255,.12);
+  }
+  .footer-brand .brand-text strong{ color:var(--cream); font-size:19px; }
+  .footer-brand p{ color:#BFD6C8; font-size:14px; margin-top:14px; max-width:280px; }
+  .footer-col h4{
+    font-size:13px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--gold-soft); margin-bottom:16px; font-family:var(--font-body); font-weight:700;
+  }
+  .footer-col a, .footer-col p{ display:block; font-size:14.5px; color:#D8E6DC; margin-bottom:11px; }
+  .footer-col a:hover{ color:var(--gold-soft); }
+  .social-row{ display:flex; gap:10px; margin-top:6px; }
+  .social-row a{
+    width:36px; height:36px; border-radius:50%;
+    background:rgba(255,255,255,.1);
+    display:flex; align-items:center; justify-content:center;
+    font-size:15px; font-weight:700;
+    color:var(--cream);
+  }
+  .social-row a svg{ display:block; }
+  .social-row a.social-wa{ background:#25D366; color:#fff; }
+  .social-row a.social-wa:hover{ background:#1ebe5a; color:#fff; }
+  .social-row a:hover{ background:var(--gold); color:var(--brick); }
+  .footer-bottom{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:22px 0; flex-wrap:wrap; gap:10px;
+    font-size:13px; color:#9fc2ad;
+  }
+
+  @media (max-width:880px){
+    .footer-grid{ grid-template-columns:1fr; gap:30px; }
+  }
+
+  /* ---------- WhatsApp floating button ---------- */
+  .wa-float{
+    position:fixed; bottom:22px; right:22px; z-index:60;
+    background:#25D366;
+    color:#fff;
+    width:58px; height:58px;
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+    font-size:26px;
+    transition:transform .2s;
+  }
+  .wa-float:hover{ transform:scale(1.08); }
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+
+  /* ---------- Reduced motion ---------- */
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; animation:none !important; scroll-behavior:auto !important; }
+  }
+
+  /* ---------- Focus visibility ---------- */
+  a:focus-visible, button:focus-visible{
+    outline:3px solid var(--gold);
+    outline-offset:2px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="nav">
+    <a href="#top" class="brand">
+      <img src="images/logo.png" alt="Global Hilton International Academy crest" class="crest" id="logoImg">
+      <div class="brand-text">
+        <strong id="schoolName">Global Hilton Int'l Academy</strong>
+        <span id="schoolMotto">Wisdom Is The Principal Thing</span>
+      </div>
+    </a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#location">Location</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#admission" class="nav-cta desktop">Apply Now</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+  </div>
+  <div id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#curriculum">Curriculum</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#location">Location</a>
+    <a href="#contact">Contact</a>
+    <a href="#admission" class="btn btn-gold nav-cta">Apply Now</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top" style="padding:0;">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow" id="heroEyebrow">Uruan LGA &middot; Akwa Ibom State</div>
+      <h1 id="heroHeading">Give your child the best foundation for a <em>brighter future.</em></h1>
+      <p class="lede" id="heroLede">Global Hilton International Academy is a government-approved school offering Creche, Nursery, Primary and Secondary education — built on sound discipline, modern teaching, and genuine care for every child.</p>
+      <div class="hero-actions">
+        <a href="#admission" class="btn btn-gold">Admission is Now Open</a>
+        <a href="https://wa.me/2348069245664" target="_blank" rel="noopener" class="btn btn-outline">Chat on WhatsApp</a>
+      </div>
+      <div class="motto-tag" id="heroMottoTag">&ldquo;Wisdom Is The Principal Thing&rdquo;</div>
+    </div>
+    <div class="hero-photo">
+      <img src="images/hero.jpg" alt="Global Hilton International Academy school building with green walls and gold columns" id="heroImg">
+      <span class="badge">Government Approved</span>
+    </div>
+  </div>
+</section>
+
+<div class="col-divider"><div class="col-row">
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div></div>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="bg-cream" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="eyebrow">About Our School</div>
+        <h2 style="color:var(--green-deep); font-size:clamp(26px,3vw,36px); margin-bottom:20px;" id="aboutHeading">A new academy, built for the long term</h2>
+        <p class="lead" id="aboutLead">Every classroom, every column, every gate on our campus was built with one generation in mind: yours.</p>
+        <p id="aboutParaOne">Global Hilton International Academy sits at #15 Ikot Akpakang Road, Ibiaku Obio Ndobo, off Airport Road in Uruan LGA. Our campus was purpose-built — not converted from another use — with proper classroom blocks, a perimeter wall for safety, and space for children to learn and play without crowding.</p>
+        <p id="aboutParaTwo">We run a full pathway from Early Childhood Education (Creche &amp; Nursery) through Primary, Junior Secondary and Senior Secondary School, so a child can grow with us from their very first day of school to graduation.</p>
+        <div class="about-stats">
+          <div class="stat"><strong id="statOneNum">6</strong><span id="statOneLabel">Stages of Education</span></div>
+          <div class="stat"><strong id="statTwoNum">100%</strong><span id="statTwoLabel">Govt. Approved</span></div>
+          <div class="stat"><strong id="statThreeNum">1</strong><span id="statThreeLabel">Purpose-Built Campus</span></div>
+        </div>
+      </div>
+      <div class="about-photo reveal">
+        <img src="images/building4.jpg" alt="Front view of Global Hilton International Academy classroom block" id="aboutImg">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY CHOOSE US ===================== -->
+<section class="bg-dim">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Why Families Choose Us</div>
+      <h2>Built on discipline, care, and real teaching</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <div class="ico">&#127891;</div>
+        <h3>Qualified &amp; Caring Teachers</h3>
+        <p>Our staff are selected for both their training and their genuine warmth toward children.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="ico">&#127794;</div>
+        <h3>Conducive Learning Environment</h3>
+        <p>Spacious classrooms, secure grounds, and a calm campus built for focus.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="ico">&#9878;</div>
+        <h3>Sound Academic &amp; Moral Training</h3>
+        <p>We pair strong academics with character — discipline and wisdom go hand in hand.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="ico">&#128187;</div>
+        <h3>Modern Teaching Methods</h3>
+        <p>Computer studies and contemporary classroom techniques from an early stage.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="ico">&#129309;</div>
+        <h3>Vocational Skills Development</h3>
+        <p>Practical, hands-on skills that prepare students for life beyond the classroom.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="ico">&#8358;</div>
+        <h3>Affordable Fees</h3>
+        <p>Quality education that respects what families in our community can afford.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="col-divider"><div class="col-row">
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div></div>
+
+<!-- ===================== CURRICULUM ===================== -->
+<section class="bg-green" id="curriculum">
+  <div class="wrap">
+    <div class="curric-wrap">
+      <div class="reveal">
+        <div class="eyebrow">Our Curriculum</div>
+        <h2 style="margin-bottom:18px;">One school, every stage</h2>
+        <p style="color:#CFE0D6; font-size:15.5px; margin-bottom:10px;">A clear pathway from a child's first classroom to their final exam.</p>
+      </div>
+      <div class="reveal">
+        <ul class="curric-list">
+          <li><span class="num">01</span> Early Childhood Education (Creche &amp; Nursery)</li>
+          <li><span class="num">02</span> Primary Education (Basic 1 – 6)</li>
+          <li><span class="num">03</span> Junior Secondary School</li>
+          <li><span class="num">04</span> Senior Secondary School</li>
+          <li><span class="num">05</span> Computer Studies</li>
+          <li><span class="num">06</span> Vocational Skills Development</li>
+          <li><span class="num">07</span> Moral &amp; Leadership Training</li>
+        </ul>
+        <div class="uniform-card" style="margin-top:26px;">
+          <img src="images/uniform.jpg" alt="Global Hilton International Academy pupil in school uniform, front and back view" id="uniformImg">
+          <div>
+            <h3 id="uniformHeading">School Uniform</h3>
+            <p id="uniformText">Clean, simple and built for active children — white &amp; green sportswear with our school crest, worn with pride on and off the field.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ADMISSION CTA ===================== -->
+<section class="admission-band" id="admission">
+  <div class="wrap">
+    <div class="admission-inner">
+      <div>
+        <h2 id="admissionHeading">Admission is now open for the new session.</h2>
+        <p id="admissionSubtext">Spaces are limited at every level — secure your child's seat today.</p>
+      </div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="https://wa.me/2348069245664?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20admission%20at%20Global%20Hilton%20Int%27l%20Academy" target="_blank" rel="noopener" class="btn btn-dark">Enquire on WhatsApp</a>
+        <a href="tel:+2348069245664" class="btn" style="background:transparent; border:2px solid var(--brick); color:var(--brick);">Call Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALLERY ===================== -->
+<section class="bg-cream" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Our Campus</div>
+      <h2 id="galleryCampusHeading">A look around Global Hilton</h2>
+      <p id="galleryCampusText">From classroom blocks to the perimeter wall — every part of our campus was built with your child's safety and comfort in mind.</p>
+    </div>
+    <div class="gallery-grid" id="galleryGridCampus"></div>
+
+    <div class="section-head reveal" style="margin-top:62px;">
+      <div class="eyebrow">Inside Our Classrooms</div>
+      <h2 id="galleryClassroomsHeading">Bright rooms, ready to learn in</h2>
+      <p id="galleryClassroomsText">Every classroom is painted, furnished, and decorated to make young learners feel at home from day one.</p>
+    </div>
+    <div class="gallery-grid" id="galleryGridClassrooms"></div>
+  </div>
+</section>
+
+<div class="col-divider"><div class="col-row">
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div></div>
+
+<!-- ===================== LOCATION ===================== -->
+<section class="bg-dim" id="location">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Find Us</div>
+      <h2>Visit our campus</h2>
+    </div>
+    <div class="location-grid reveal">
+      <div class="location-info">
+        <h3 id="locationSchoolName">Global Hilton Int'l Academy</h3>
+        <div class="info-row"><span class="ico">&#128205;</span><span id="locationAddress">#15 Ikot Akpakang Road, Ibiaku Obio Ndobo, Off Airport Road, Uruan LGA, Akwa Ibom State, Nigeria.</span></div>
+        <div class="info-row"><span class="ico">&#128222;</span><span id="locationPhones"><a href="tel:+2348069245664">0806 924 5664</a> &middot; <a href="tel:+2348067081434">0806 708 1434</a></span></div>
+        <div class="info-row"><span class="ico">&#9993;</span><span><a href="mailto:globalhiltonintlacademy@gmail.com" id="locationEmail">globalhiltonintlacademy@gmail.com</a></span></div>
+        <div class="info-row"><span class="ico">&#128338;</span><span id="locationHours">Mon – Fri, 7:30am – 3:30pm</span></div>
+        <a href="https://wa.me/2348069245664" target="_blank" rel="noopener" class="btn btn-gold" style="margin-top:18px;">Message Us on WhatsApp</a>
+      </div>
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps?q=Ikot%20Akpakang%20Road%2C%20Ibiaku%20Obio%20Ndobo%2C%20Uruan%2C%20Akwa%20Ibom&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map showing location of Global Hilton International Academy"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand">
+          <img src="images/logo.png" alt="Global Hilton International Academy crest" class="crest footer-crest" id="footerLogoImg">
+          <div class="brand-text"><strong id="footerSchoolName">Global Hilton Int'l Academy</strong></div>
+        </a>
+        <p id="footerAbout">Building future leaders through knowledge and discipline. Creche, Nursery, Primary and Secondary education in Uruan LGA, Akwa Ibom State.</p>
+        <div class="social-row">
+          <a href="https://wa.me/2348069245664" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-wa">
+            <svg viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16.004 3C9.376 3 4 8.373 4 15.002c0 2.474.738 4.78 2.003 6.71L4.5 27.5l5.94-1.56a11.93 11.93 0 0 0 5.564 1.39h.005c6.627 0 12.001-5.373 12.001-12.002C28.01 8.373 22.636 3 16.004 3zm0 21.86h-.004a9.86 9.86 0 0 1-5.02-1.374l-.36-.214-3.71.973.99-3.617-.235-.372a9.84 9.84 0 0 1-1.51-5.255c0-5.448 4.435-9.882 9.857-9.882 2.634 0 5.108 1.027 6.97 2.892a9.79 9.79 0 0 1 2.886 6.974c0 5.448-4.434 9.875-9.864 9.875zm5.404-7.397c-.296-.148-1.752-.864-2.024-.963-.272-.099-.47-.148-.668.148-.198.297-.767.964-.94 1.162-.173.198-.347.223-.643.075-.297-.148-1.253-.462-2.387-1.474-.883-.787-1.479-1.76-1.652-2.057-.173-.297-.018-.458.13-.606.148-.148.331-.385.496-.578.165-.194.22-.331.33-.55.11-.222.055-.42-.04-.567-.099-.148-.92-2.222-1.16-2.766-.236-.53-.475-.46-.65-.46h-.555c-.198 0-.52.075-.793.372-.272.297-1.04 1.017-1.04 2.48s1.066 2.876 1.214 3.075c.148.198 2.06 3.142 4.99 4.282 2.93 1.14 2.93.76 3.456.71.525-.05 1.752-.715 2-1.41.248-.692.248-1.288.173-1.41-.074-.124-.27-.198-.566-.347z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/share/18wSJjGyHP/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.45 2.91h-2.33V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@global.hilton.int" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M16.6 5.82a4.28 4.28 0 0 1-3.07-1.36V14.4a4.85 4.85 0 1 1-4.85-4.85c.16 0 .32 0 .48.03v2.5a2.34 2.34 0 1 0 1.96 2.32V2h2.4a4.28 4.28 0 0 0 3.08 4.08v2.4a6.7 6.7 0 0 1-2.4-.46v6.39a4.85 4.85 0 1 1-3.07-4.51V2h.02a4.27 4.27 0 0 0 5.45 4.08z"/></svg>
+          </a>
+          <a href="mailto:globalhiltonintlacademy@gmail.com" aria-label="Email">&#9993;</a>
+          <a href="tel:+2348069245664" aria-label="Call">&#128222;</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#about">About Us</a>
+        <a href="#curriculum">Curriculum</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#admission">Admission</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>#15 Ikot Akpakang Road, Ibiaku Obio Ndobo, Uruan LGA, Akwa Ibom State.</p>
+        <a href="tel:+2348069245664">0806 924 5664</a>
+        <a href="mailto:globalhiltonintlacademy@gmail.com">globalhiltonintlacademy@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Global Hilton International Academy. All rights reserved.</span>
+      <span>Wisdom Is The Principal Thing</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/2348069245664?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20Global%20Hilton%20Int%27l%20Academy" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="#FFFFFF" d="M16.004 3C9.376 3 4 8.373 4 15.002c0 2.474.738 4.78 2.003 6.71L4.5 27.5l5.94-1.56a11.93 11.93 0 0 0 5.564 1.39h.005c6.627 0 12.001-5.373 12.001-12.002C28.01 8.373 22.636 3 16.004 3zm0 21.86h-.004a9.86 9.86 0 0 1-5.02-1.374l-.36-.214-3.71.973.99-3.617-.235-.372a9.84 9.84 0 0 1-1.51-5.255c0-5.448 4.435-9.882 9.857-9.882 2.634 0 5.108 1.027 6.97 2.892a9.79 9.79 0 0 1 2.886 6.974c0 5.448-4.434 9.875-9.864 9.875zm5.404-7.397c-.296-.148-1.752-.864-2.024-.963-.272-.099-.47-.148-.668.148-.198.297-.767.964-.94 1.162-.173.198-.347.223-.643.075-.297-.148-1.253-.462-2.387-1.474-.883-.787-1.479-1.76-1.652-2.057-.173-.297-.018-.458.13-.606.148-.148.331-.385.496-.578.165-.194.22-.331.33-.55.11-.222.055-.42-.04-.567-.099-.148-.92-2.222-1.16-2.766-.236-.53-.475-.46-.65-.46h-.555c-.198 0-.52.075-.793.372-.272.297-1.04 1.017-1.04 2.48s1.066 2.876 1.214 3.075c.148.198 2.06 3.142 4.99 4.282 2.93 1.14 2.93.76 3.456.71.525-.05 1.752-.715 2-1.41.248-.692.248-1.288.173-1.41-.074-.124-.27-.198-.566-.347z"/></svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', isOpen);
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }));
+
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => obs.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+
+  /* ===================== CMS CONTENT LOADER ===================== */
+  fetch('/data/content.json')
+    .then(res => res.json())
+    .then(data => {
+      const setText = (id, value) => {
+        const el = document.getElementById(id);
+        if (el && value !== undefined && value !== null) el.innerHTML = value;
+      };
+      const setSrc = (id, value) => {
+        const el = document.getElementById(id);
+        if (el && value) el.src = value;
+      };
+
+      // Header / Brand
+      setText('schoolName', data.schoolName);
+      setText('schoolMotto', data.schoolMotto);
+      setSrc('logoImg', data.logoImage);
+
+      // Hero
+      setText('heroEyebrow', data.heroEyebrow);
+      setText('heroHeading', data.heroHeading);
+      setText('heroLede', data.heroLede);
+      setText('heroMottoTag', data.heroMottoTag);
+      setSrc('heroImg', data.heroImage);
+
+      // About
+      setText('aboutHeading', data.aboutHeading);
+      setText('aboutLead', data.aboutLead);
+      setText('aboutParaOne', data.aboutParaOne);
+      setText('aboutParaTwo', data.aboutParaTwo);
+      setSrc('aboutImg', data.aboutImage);
+      setText('statOneNum', data.statOneNum);
+      setText('statOneLabel', data.statOneLabel);
+      setText('statTwoNum', data.statTwoNum);
+      setText('statTwoLabel', data.statTwoLabel);
+      setText('statThreeNum', data.statThreeNum);
+      setText('statThreeLabel', data.statThreeLabel);
+
+      // Admission CTA
+      setText('admissionHeading', data.admissionHeading);
+      setText('admissionSubtext', data.admissionSubtext);
+
+      // Uniform card
+      setSrc('uniformImg', data.uniformImage);
+      setText('uniformHeading', data.uniformHeading);
+      setText('uniformText', data.uniformText);
+
+      // Gallery headings
+      setText('galleryCampusHeading', data.galleryCampusHeading);
+      setText('galleryCampusText', data.galleryCampusText);
+      setText('galleryClassroomsHeading', data.galleryClassroomsHeading);
+      setText('galleryClassroomsText', data.galleryClassroomsText);
+
+      // Location
+      setText('locationSchoolName', data.locationSchoolName);
+      setText('locationAddress', data.locationAddress);
+      setText('locationHours', data.locationHours);
+
+      // Footer
+      setSrc('footerLogoImg', data.logoImage);
+      setText('footerSchoolName', data.schoolName);
+      setText('footerAbout', data.footerAbout);
+
+      // Photo Gallery (list of {image, title})
+      const gallery = Array.isArray(data.gallery) ? data.gallery : [];
+      const campusGrid = document.getElementById('galleryGridCampus');
+      const classroomGrid = document.getElementById('galleryGridClassrooms');
+
+      if (campusGrid) {
+        campusGrid.innerHTML = gallery.map((item, i) => `
+          <figure class="${i === 0 ? 'g-big ' : ''}reveal">
+            <img src="${item.image}" alt="${item.title || ''}">
+            <figcaption>${item.title || ''}</figcaption>
+          </figure>
+        `).join('');
+      }
+
+      // If a second grid exists and there are more than 8 images, split the remainder into it
+      if (classroomGrid && gallery.length > 8) {
+        const rest = gallery.slice(8);
+        classroomGrid.innerHTML = rest.map((item, i) => `
+          <figure class="${i === 0 ? 'g-big ' : ''}reveal">
+            <img src="${item.image}" alt="${item.title || ''}">
+            <figcaption>${item.title || ''}</figcaption>
+          </figure>
+        `).join('');
+      }
+
+      // Re-observe newly injected .reveal elements
+      document.querySelectorAll('.reveal').forEach(el => {
+        if ('IntersectionObserver' in window) {
+          const obs2 = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs2.unobserve(e.target); } });
+          }, { threshold: 0.12 });
+          obs2.observe(el);
+        } else {
+          el.classList.add('in');
+        }
+      });
+    })
+    .catch(err => console.error('Could not load content.json:', err));
+</script>
+
+</body>
+</html>
