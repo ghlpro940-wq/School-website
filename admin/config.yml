@@ -1,0 +1,61 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "content"
+    label: "Website Content"
+    files:
+      - name: "main"
+        label: "Site Content"
+        file: "data/content.json"
+        fields:
+          - { label: "School Name", name: "schoolName", widget: "string" }
+          - { label: "School Motto", name: "schoolMotto", widget: "string" }
+          - { label: "Logo Image", name: "logoImage", widget: "image" }
+
+          - { label: "Hero Eyebrow Text", name: "heroEyebrow", widget: "string" }
+          - { label: "Hero Heading", name: "heroHeading", widget: "string" }
+          - { label: "Hero Description", name: "heroLede", widget: "text" }
+          - { label: "Hero Motto Tag", name: "heroMottoTag", widget: "string" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+
+          - { label: "About Heading", name: "aboutHeading", widget: "string" }
+          - { label: "About Lead Line", name: "aboutLead", widget: "text" }
+          - { label: "About Paragraph 1", name: "aboutParaOne", widget: "text" }
+          - { label: "About Paragraph 2", name: "aboutParaTwo", widget: "text" }
+          - { label: "About Image", name: "aboutImage", widget: "image" }
+          - { label: "Stat 1 Number", name: "statOneNum", widget: "string" }
+          - { label: "Stat 1 Label", name: "statOneLabel", widget: "string" }
+          - { label: "Stat 2 Number", name: "statTwoNum", widget: "string" }
+          - { label: "Stat 2 Label", name: "statTwoLabel", widget: "string" }
+          - { label: "Stat 3 Number", name: "statThreeNum", widget: "string" }
+          - { label: "Stat 3 Label", name: "statThreeLabel", widget: "string" }
+
+          - { label: "Admission Heading", name: "admissionHeading", widget: "string" }
+          - { label: "Admission Subtext", name: "admissionSubtext", widget: "text" }
+
+          - { label: "Uniform Image", name: "uniformImage", widget: "image" }
+          - { label: "Uniform Heading", name: "uniformHeading", widget: "string" }
+          - { label: "Uniform Text", name: "uniformText", widget: "text" }
+
+          - { label: "Campus Gallery Heading", name: "galleryCampusHeading", widget: "string" }
+          - { label: "Campus Gallery Text", name: "galleryCampusText", widget: "text" }
+          - { label: "Classrooms Gallery Heading", name: "galleryClassroomsHeading", widget: "string" }
+          - { label: "Classrooms Gallery Text", name: "galleryClassroomsText", widget: "text" }
+
+          - { label: "Location - School Name", name: "locationSchoolName", widget: "string" }
+          - { label: "Location - Address", name: "locationAddress", widget: "text" }
+          - { label: "Location - Hours", name: "locationHours", widget: "string" }
+
+          - { label: "Footer About Text", name: "footerAbout", widget: "text" }
+
+          - label: "Photo Gallery"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Title", name: "title", widget: "string" }
