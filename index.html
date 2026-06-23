@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Hilton Int'l Academy — Admission Now Open</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<meta name="description" content="Global Hilton International Academy, Uruan LGA, Akwa Ibom State. Government-approved Creche, Nursery, Primary and Secondary education. Admission now open.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --green-deep:   #155A36;
+    --green-mid:    #1B6B3D;
+    --gold:         #E0A92E;
+    --gold-soft:    #F0C75E;
+    --brick:        #3E2723;
+    --brick-soft:   #6B4A3F;
+    --cream:        #F7F3E8;
+    --cream-dim:    #EFE8D8;
+    --ink:          #21221D;
+    --red:          #B43A2E;
+    --white:        #FFFFFF;
+
+    --font-display: "Fraunces", serif;
+    --font-body: "Work Sans", sans-serif;
+
+    --maxw: 1180px;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img{ max-width:100%; display:block; }
+
+  a{ color:inherit; text-decoration:none; }
+
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  h1,h2,h3{ font-family:var(--font-display); font-weight:700; line-height:1.08; }
+
+  /* ---------- Column motif (signature element) ---------- */
+  .col-divider{
+    height:34px;
+    width:100%;
+    position:relative;
+    overflow:hidden;
+    background:var(--cream);
+  }
+  .col-divider .col-row{
+    position:absolute; inset:0;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:flex-start;
+  }
+  .col-divider .col-row span{
+    width:6px; height:34px;
+    background:linear-gradient(var(--gold-soft), var(--gold));
+    border-radius:0 0 3px 3px;
+    box-shadow: 0 4px 0 -1px var(--green-mid);
+  }
+  .col-divider .col-row span::before{
+    content:"";
+    position:absolute;
+    top:0; width:14px; height:8px;
+    margin-left:-4px;
+    background:var(--gold-soft);
+    border-radius:2px;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--green-deep);
+    border-bottom:4px solid var(--gold);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 24px;
+    max-width:var(--maxw); margin:0 auto;
+  }
+  .brand{
+    display:flex; align-items:center; gap:12px;
+    color:var(--cream);
+  }
+  .crest{
+    width:48px; height:48px;
+    flex-shrink:0;
+    object-fit:contain;
+  }
+  .crest.footer-crest{ width:54px; height:54px; }
+  .brand-text{ display:flex; flex-direction:column; line-height:1.15; }
+  .brand-text strong{
+    font-family:var(--font-display); font-weight:700; font-size:17px;
+    letter-spacing:.2px;
+  }
+  .brand-text span{
+    font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--gold-soft);
+  }
+  nav.links{
+    display:flex; gap:28px;
+    font-size:14.5px; font-weight:600;
+    color:var(--cream);
+  }
+  nav.links a{ opacity:.88; transition:opacity .15s, color .15s; }
+  nav.links a:hover{ opacity:1; color:var(--gold-soft); }
+
+  .nav-cta{
+    background:var(--gold);
+    color:var(--brick);
+    font-weight:700;
+    font-size:14px;
+    padding:9px 18px;
+    border-radius:3px;
+    border:1px solid var(--gold-soft);
+  }
+  .nav-cta:hover{ background:var(--gold-soft); }
+
+  .menu-btn{
+    display:none;
+    background:none; border:none; color:var(--cream);
+    font-size:26px; cursor:pointer;
+  }
+
+  @media (max-width: 880px){
+    nav.links, .nav-cta.desktop{ display:none; }
+    .menu-btn{ display:block; }
+  }
+
+  #mobileMenu{
+    display:none;
+    background:var(--green-mid);
+    border-top:1px solid rgba(255,255,255,.15);
+  }
+  #mobileMenu.open{ display:block; }
+  #mobileMenu a{
+    display:block;
+    color:var(--cream);
+    padding:14px 24px;
+    font-weight:600;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  #mobileMenu .nav-cta{ margin:14px 24px; display:inline-block; }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    background:var(--green-deep);
+    overflow:hidden;
+  }
+  .hero-grid{
+    max-width:var(--maxw); margin:0 auto;
+    display:grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap:48px;
+    align-items:center;
+    padding:64px 24px 56px;
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    color:var(--gold-soft);
+    font-size:13px; font-weight:700;
+    letter-spacing:.14em; text-transform:uppercase;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{
+    content:""; width:22px; height:2px; background:var(--gold-soft);
+  }
+  .hero h1{
+    color:var(--cream);
+    font-size:clamp(34px, 4.6vw, 58px);
+    margin-bottom:18px;
+  }
+  .hero h1 em{
+    font-style:normal; color:var(--gold-soft);
+  }
+  .hero p.lede{
+    color:#D8E6DC;
+    font-size:17px;
+    max-width:480px;
+    margin-bottom:30px;
+  }
+  .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:34px; }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:9px;
+    font-weight:700; font-size:15px;
+    padding:14px 26px;
+    border-radius:3px;
+    border:2px solid transparent;
+    cursor:pointer;
+    transition:transform .15s, background .15s, color .15s;
+  }
+  .btn:active{ transform:translateY(1px); }
+  .btn-gold{ background:var(--gold); color:var(--brick); }
+  .btn-gold:hover{ background:var(--gold-soft); }
+  .btn-outline{ border-color:var(--gold-soft); color:var(--cream); }
+  .btn-outline:hover{ background:rgba(255,255,255,.08); }
+
+  .motto-tag{
+    display:inline-flex; align-items:center; gap:10px;
+    background:rgba(0,0,0,.18);
+    border-left:3px solid var(--gold);
+    padding:10px 16px;
+    color:var(--gold-soft);
+    font-family:var(--font-display);
+    font-style:italic;
+    font-size:14.5px;
+  }
+
+  .hero-photo{
+    position:relative;
+    border-radius:4px;
+    overflow:hidden;
+    border:6px solid var(--gold);
+    box-shadow:0 24px 50px -16px rgba(0,0,0,.55);
+  }
+  .hero-photo img{ width:100%; height:100%; object-fit:cover; aspect-ratio:4/3.3; }
+  .hero-photo .badge{
+    position:absolute; bottom:14px; left:14px;
+    background:var(--red);
+    color:var(--cream);
+    font-weight:800;
+    font-size:12.5px;
+    letter-spacing:.06em;
+    padding:7px 14px;
+    border-radius:2px;
+    text-transform:uppercase;
+  }
+
+  @media (max-width:880px){
+    .hero-grid{ grid-template-columns:1fr; padding-top:42px; }
+    .hero-photo{ order:-1; }
+  }
+
+  /* ---------- Section scaffolding ---------- */
+  section{ padding:84px 0; }
+  .section-head{ max-width:640px; margin-bottom:48px; }
+  .section-head .eyebrow{ color:var(--brick-soft); }
+  .section-head .eyebrow::before{ background:var(--brick-soft); }
+  .section-head h2{ font-size:clamp(28px,3.2vw,40px); color:var(--green-deep); }
+  .section-head p{ margin-top:14px; font-size:16px; color:#4b4b43; max-width:560px; }
+
+  .bg-cream{ background:var(--cream); }
+  .bg-dim{ background:var(--cream-dim); }
+  .bg-green{ background:var(--green-deep); color:var(--cream); }
+  .bg-green .section-head h2{ color:var(--cream); }
+  .bg-green .section-head p{ color:#CFE0D6; }
+  .bg-green .eyebrow{ color:var(--gold-soft) !important; }
+  .bg-green .eyebrow::before{ background:var(--gold-soft) !important; }
+
+  /* ---------- About ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:56px;
+    align-items:center;
+  }
+  .about-photo{
+    position:relative;
+    border-radius:3px;
+    overflow:hidden;
+  }
+  .about-photo img{ aspect-ratio:5/4; object-fit:cover; }
+  .about-photo::after{
+    content:"";
+    position:absolute; inset:0;
+    border:1px solid rgba(0,0,0,.08);
+  }
+  .about-stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-top:34px;
+  }
+  .stat{
+    background:var(--white);
+    border-top:3px solid var(--gold);
+    padding:16px 14px;
+    border-radius:2px;
+  }
+  .stat strong{
+    display:block; font-family:var(--font-display);
+    font-size:26px; color:var(--green-deep);
+  }
+  .stat span{ font-size:12.5px; color:#6a6a60; }
+
+  .about-text p{ font-size:16px; color:#3c3c34; margin-bottom:16px; }
+  .about-text .lead{ font-size:18.5px; color:var(--brick); font-weight:600; margin-bottom:18px; font-family:var(--font-display);}
+
+  @media (max-width:880px){
+    .about-grid{ grid-template-columns:1fr; }
+    .about-photo{ order:-1; }
+  }
+
+  /* ---------- Curriculum / Why choose us ---------- */
+  .feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+  }
+  .feature-card{
+    background:var(--white);
+    padding:28px 24px;
+    border-radius:3px;
+    border-left:4px solid var(--green-mid);
+  }
+  .feature-card .ico{
+    width:42px; height:42px;
+    background:var(--cream-dim);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:16px;
+    color:var(--green-deep);
+    font-size:19px;
+    font-weight:700;
+  }
+  .feature-card h3{
+    font-size:17px; margin-bottom:8px; color:var(--brick);
+    font-family:var(--font-body); font-weight:700;
+  }
+  .feature-card p{ font-size:14.5px; color:#5d5d54; }
+
+  @media (max-width:880px){
+    .feature-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:560px){
+    .feature-grid{ grid-template-columns:1fr; }
+  }
+
+  /* ---------- Curriculum list section ---------- */
+  .curric-wrap{
+    display:grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap:50px;
+    align-items:start;
+  }
+  .curric-list{ list-style:none; }
+  .curric-list li{
+    display:flex; gap:14px;
+    padding:16px 0;
+    border-bottom:1px solid rgba(255,255,255,.15);
+    font-size:16px;
+  }
+  .curric-list li .num{
+    font-family:var(--font-display);
+    color:var(--gold-soft);
+    font-weight:700;
+    font-size:15px;
+    flex-shrink:0;
+    width:26px;
+  }
+  .uniform-card{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:4px;
+    padding:22px;
+    display:flex;
+    gap:20px;
+    align-items:center;
+  }
+  .uniform-card img{ width:180px; border-radius:3px; flex-shrink:0; }
+  .uniform-card h3{ font-family:var(--font-body); font-size:15px; color:var(--gold-soft); margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em;}
+  .uniform-card p{ font-size:14px; color:#D8E6DC; }
+
+  @media (max-width:880px){
+    .curric-wrap{ grid-template-columns:1fr; }
+    .uniform-card{ flex-direction:column; text-align:center; }
+    .uniform-card img{ width:160px; }
+  }
+
+  /* ---------- Admission CTA band ---------- */
+  .admission-band{
+    background:var(--gold);
+    padding:54px 0;
+  }
+  .admission-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    flex-wrap:wrap; gap:24px;
+  }
+  .admission-inner h2{
+    font-size:clamp(24px,3vw,34px);
+    color:var(--brick);
+    max-width:560px;
+  }
+  .admission-inner p{ color:#5a3f1a; margin-top:8px; font-size:15px; }
+  .btn-dark{ background:var(--brick); color:var(--cream); }
+  .btn-dark:hover{ background:#2b1a16; }
+
+  /* ---------- Gallery ---------- */
+  .gallery-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows:160px;
+    gap:10px;
+  }
+  .gallery-grid figure{
+    overflow:hidden;
+    border-radius:3px;
+    position:relative;
+    margin:0;
+  }
+  .gallery-grid img{
+    width:100%; height:100%; object-fit:cover;
+    transition:transform .4s ease;
+  }
+  .gallery-grid figure:hover img{ transform:scale(1.06); }
+  .gallery-grid figcaption{
+    position:absolute; left:0; right:0; bottom:0;
+    background:linear-gradient(transparent, rgba(0,0,0,.65));
+    color:#fff; font-size:12px; font-weight:600;
+    padding:18px 10px 8px;
+    opacity:0; transition:opacity .25s;
+  }
+  .gallery-grid figure:hover figcaption{ opacity:1; }
+
+  .g-big{ grid-column:span 2; grid-row:span 2; }
+
+  @media (max-width:880px){
+    .gallery-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:150px; }
+    .g-big{ grid-column:span 2; grid-row:span 1; }
+  }
+
+  /* ---------- Map / location ---------- */
+  .location-grid{
+    display:grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap:0;
+    border-radius:4px;
+    overflow:hidden;
+    border:1px solid rgba(0,0,0,.08);
+  }
+  .location-info{
+    background:var(--brick);
+    color:var(--cream);
+    padding:42px 34px;
+  }
+  .location-info h3{ font-family:var(--font-display); font-size:24px; margin-bottom:18px; color:var(--gold-soft); }
+  .info-row{ display:flex; gap:12px; margin-bottom:18px; font-size:15px; align-items:flex-start; }
+  .info-row .ico{ flex-shrink:0; width:20px; text-align:center; margin-top:2px; color:var(--gold-soft); font-weight:700; }
+  .location-info a{ text-decoration:underline; text-decoration-color:var(--gold-soft); }
+  .map-frame{ min-height:380px; background:#ccc; }
+  .map-frame iframe{ width:100%; height:100%; min-height:380px; border:0; display:block; }
+
+  @media (max-width:880px){
+    .location-grid{ grid-template-columns:1fr; }
+  }
+
+  /* ---------- Footer ---------- */
+  footer{ background:var(--green-deep); color:var(--cream); padding:56px 0 0; }
+  .footer-grid{
+    display:grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:40px;
+    border-bottom:1px solid rgba(255,255,255,.12);
+  }
+  .footer-brand .brand-text strong{ color:var(--cream); font-size:19px; }
+  .footer-brand p{ color:#BFD6C8; font-size:14px; margin-top:14px; max-width:280px; }
+  .footer-col h4{
+    font-size:13px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--gold-soft); margin-bottom:16px; font-family:var(--font-body); font-weight:700;
+  }
+  .footer-col a, .footer-col p{ display:block; font-size:14.5px; color:#D8E6DC; margin-bottom:11px; }
+  .footer-col a:hover{ color:var(--gold-soft); }
+  .social-row{ display:flex; gap:10px; margin-top:6px; }
+  .social-row a{
+    width:36px; height:36px; border-radius:50%;
+    background:rgba(255,255,255,.1);
+    display:flex; align-items:center; justify-content:center;
+    font-size:15px; font-weight:700;
+    color:var(--cream);
+  }
+  .social-row a svg{ display:block; }
+  .social-row a.social-wa{ background:#25D366; color:#fff; }
+  .social-row a.social-wa:hover{ background:#1ebe5a; color:#fff; }
+  .social-row a:hover{ background:var(--gold); color:var(--brick); }
+  .footer-bottom{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:22px 0; flex-wrap:wrap; gap:10px;
+    font-size:13px; color:#9fc2ad;
+  }
+
+  @media (max-width:880px){
+    .footer-grid{ grid-template-columns:1fr; gap:30px; }
+  }
+
+  /* ---------- WhatsApp floating button ---------- */
+  .wa-float{
+    position:fixed; bottom:22px; right:22px; z-index:60;
+    background:#25D366;
+    color:#fff;
+    width:58px; height:58px;
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+    font-size:26px;
+    transition:transform .2s;
+  }
+  .wa-float:hover{ transform:scale(1.08); }
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+
+  /* ---------- Reduced motion ---------- */
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; animation:none !important; scroll-behavior:auto !important; }
+  }
+
+  /* ---------- Focus visibility ---------- */
+  a:focus-visible, button:focus-visible{
+    outline:3px solid var(--gold);
+    outline-offset:2px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="nav">
+    <a href="#top" class="brand">
+      <img src="images/logo.png" alt="Global Hilton International Academy crest" class="crest" id="logoImg">
+      <div class="brand-text">
+        <strong id="schoolName">Global Hilton Int'l Academy</strong>
+        <span id="schoolMotto">Wisdom Is The Principal Thing</span>
+      </div>
+    </a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#location">Location</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#admission" class="nav-cta desktop">Apply Now</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+  </div>
+  <div id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#curriculum">Curriculum</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#location">Location</a>
+    <a href="#contact">Contact</a>
+    <a href="#admission" class="btn btn-gold nav-cta">Apply Now</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top" style="padding:0;">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow" id="heroEyebrow">Uruan LGA &middot; Akwa Ibom State</div>
+      <h1 id="heroHeading">Give your child the best foundation for a <em>brighter future.</em></h1>
+      <p class="lede" id="heroLede">Global Hilton International Academy is a government-approved school offering Creche, Nursery, Primary and Secondary education — built on sound discipline, modern teaching, and genuine care for every child.</p>
+      <div class="hero-actions">
+        <a href="#admission" class="btn btn-gold">Admission is Now Open</a>
+        <a href="https://wa.me/2348069245664" target="_blank" rel="noopener" class="btn btn-outline">Chat on WhatsApp</a>
+      </div>
+      <div class="motto-tag" id="heroMottoTag">&ldquo;Wisdom Is The Principal Thing&rdquo;</div>
+    </div>
+    <div class="hero-photo">
+      <img src="images/hero.jpg" alt="Global Hilton International Academy school building with green walls and gold columns" id="heroImg">
+      <span class="badge">Government Approved</span>
+    </div>
+  </div>
+</section>
+
+<div class="col-divider"><div class="col-row">
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div></div>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="bg-cream" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="eyebrow">About Our School</div>
+        <h2 style="color:var(--green-deep); font-size:clamp(26px,3vw,36px); margin-bottom:20px;" id="aboutHeading">A new academy, built for the long term</h2>
+        <p class="lead" id="aboutLead">Every classroom, every column, every gate on our campus was built with one generation in mind: yours.</p>
+        <p id="aboutParaOne">Global Hilton International Academy sits at #15 Ikot Akpakang Road, Ibiaku Obio Ndobo, off Airport Road in Uruan LGA. Our campus was purpose-built — not converted from another use — with proper classroom blocks, a perimeter wall for safety, and space for children to learn and play without crowding.</p>
+        <p id="aboutParaTwo">We run a full pathway from Early Childhood Education (Creche &amp; Nursery) through Primary, Junior Secondary and Senior Secondary School, so a child can grow with us from their very first day of school to graduation.</p>
+        <div class="about-stats">
+          <div class="stat"><strong id="statOneNum">6</strong><span id="statOneLabel">Stages of Education</span></div>
+          <div class="stat"><strong id="statTwoNum">100%</strong><span id="statTwoLabel">Govt. Approved</span></div>
+          <div class="stat"><strong id="statThreeNum">1</strong><span id="statThreeLabel">Purpose-Built Campus</span></div>
+        </div>
+      </div>
+      <div class="about-photo reveal">
+        <img src="images/building4.jpg" alt="Front 
