@@ -12,7 +12,7 @@
   "careersHeading": "Employment Opportunities",
   "statTwoNum": "100%",
   "uniformHeading": "School Uniform",
-  "aboutImage": "/images/building4.jpg",
+  "aboutImage": "/images/uploads/wa_1782329354137.jpeg",
   "heroEyebrow": "Uruan LGA &middot; Uyo, Akwa Ibom state - Nigeria",
   "galleryClassroomsHeading": "Bright rooms, ready to learn in",
   "logoImage": "/images/logo.png",
@@ -22,10 +22,6 @@
     {
       "image": "/images/building2.jpg",
       "title": "Main classroom block"
-    },
-    {
-      "image": "/images/uploads/wa_1782329105700.jpeg",
-      "title": "Side wing"
     },
     {
       "image": "/images/uploads/wa_1782329354137.jpeg",
@@ -40,8 +36,12 @@
       "title": "Roofline &amp; veranda"
     },
     {
-      "image": "/images/sink.jpg",
+      "image": "/images/uploads/wa_1782331970419.jpeg",
       "title": "Hygiene station"
+    },
+    {
+      "image": "/images/uploads/wa_1782329105700.jpeg",
+      "title": "Side wing"
     },
     {
       "image": "/images/uploads/wa_1782329367810.jpeg",
