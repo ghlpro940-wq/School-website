@@ -39,6 +39,9 @@
 
   "footerAbout": "Building future leaders through knowledge and discipline. Creche, Nursery, Primary and Secondary education in Uruan LGA, Akwa Ibom State.",
 
+  "careersHeading": "Employment Opportunities",
+  "careersText": "We're always looking for passionate teachers and staff who share our commitment to nurturing young minds. If you're interested in working with us, send us your CV and we'll get in touch.",
+
   "gallery": [
     { "image": "/images/building2.jpg", "title": "Main classroom block" },
     { "image": "/images/building1.jpg", "title": "Side wing" },
