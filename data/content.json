@@ -1,63 +1,102 @@
 {
-  "schoolName": "Global Hilton Int'l Academy",
-  "schoolMotto": "Wisdom Is The Principal Thing",
-  "logoImage": "/images/logo.png",
-
-  "heroEyebrow": "Uruan LGA &middot; Akwa Ibom State",
-  "heroHeading": "Give your child the best foundation for a <em>brighter future.</em>",
-  "heroLede": "Global Hilton International Academy is a government-approved school offering Creche, Nursery, Primary and Secondary education — built on sound discipline, modern teaching, and genuine care for every child.",
-  "heroMottoTag": "&ldquo;Wisdom Is The Principal Thing&rdquo;",
+  "uniformText": "Clean, simple and built for active children — white &amp; green sportswear with our school crest, worn with pride on and off the field.",
   "heroImage": "/images/hero.jpg",
-
-  "aboutHeading": "A new academy, built for the long term",
-  "aboutLead": "Every classroom, every column, every gate on our campus was built with one generation in mind: yours.",
-  "aboutParaOne": "Global Hilton International Academy sits at #15 Ikot Akpakang Road, Ibiaku Obio Ndobo, off Airport Road in Uruan LGA. Our campus was purpose-built — not converted from another use — with proper classroom blocks, a perimeter wall for safety, and space for children to learn and play without crowding.",
-  "aboutParaTwo": "We run a full pathway from Early Childhood Education (Creche &amp; Nursery) through Primary, Junior Secondary and Senior Secondary School, so a child can grow with us from their very first day of school to graduation.",
-  "aboutImage": "/images/building4.jpg",
-  "statOneNum": "6",
   "statOneLabel": "Stages of Education",
+  "careersText": "We're always looking for passionate teachers and staff who share our commitment to nurturing young minds. If you're interested in working with us, send us your CV and we'll get in touch.",
+  "admissionSubtext": "Spaces are limited at every level — secure your child's seat today.",
+  "uniformImage": "/images/uniform.jpg",
+  "heroMottoTag": "&ldquo;Wisdom Is The Principal Thing&rdquo;",
+  "heroHeading": "Give your child the best foundation for a <em>brighter future.</em>",
+  "aboutLead": "Every classroom, every column, every gate on our campus was built with one generation in mind: yours.",
+  "statThreeLabel": "Purpose-Built Campus",
+  "careersHeading": "Employment Opportunities",
   "statTwoNum": "100%",
+  "uniformHeading": "School Uniform",
+  "aboutImage": "/images/building4.jpg",
+  "heroEyebrow": "Uruan LGA &middot; Akwa Ibom State",
+  "galleryClassroomsHeading": "Bright rooms, ready to learn in",
+  "logoImage": "/images/logo.png",
+  "galleryCampusHeading": "A look around Global Hilton",
+  "footerAbout": "Building future leaders through knowledge and discipline. Creche, Nursery, Primary and Secondary education in Uruan LGA, Akwa Ibom State —Nigeria",
+  "gallery": [
+    {
+      "image": "/images/building2.jpg",
+      "title": "Main classroom block"
+    },
+    {
+      "image": "/images/building1.jpg",
+      "title": "Side wing"
+    },
+    {
+      "image": "/images/gate2.jpg",
+      "title": "Front gate"
+    },
+    {
+      "image": "/images/classroom1.jpg",
+      "title": "Classroom interior"
+    },
+    {
+      "image": "/images/building3.jpg",
+      "title": "Roofline &amp; veranda"
+    },
+    {
+      "image": "/images/sink.jpg",
+      "title": "Hygiene station"
+    },
+    {
+      "image": "/images/gate1.jpg",
+      "title": "Perimeter wall"
+    },
+    {
+      "image": "/images/classroom3.jpg",
+      "title": "Learning corner"
+    },
+    {
+      "image": "/images/interior1.jpg",
+      "title": "Nursery classroom"
+    },
+    {
+      "image": "/images/interior9.jpg",
+      "title": "Primary classroom"
+    },
+    {
+      "image": "/images/interior11.jpg",
+      "title": "Classroom block"
+    },
+    {
+      "image": "/images/interior14.jpg",
+      "title": "Creche classroom"
+    },
+    {
+      "image": "/images/interior15.jpg",
+      "title": "Classroom block"
+    },
+    {
+      "image": "/images/interior16.jpg",
+      "title": "Classroom &amp; whiteboard"
+    },
+    {
+      "image": "/images/interior2.jpg",
+      "title": "Alphabet corner"
+    },
+    {
+      "image": "/images/interior8.jpg",
+      "title": "Learning wall art"
+    }
+  ],
+  "locationSchoolName": "Global Hilton Int'l Academy",
+  "statOneNum": "6",
+  "heroLede": "Global Hilton International Academy is a government-approved school offering Creche, Nursery, Primary and Secondary education — built on sound discipline, modern teaching, and genuine care for every child.",
+  "aboutHeading": "A new academy, built for the long term",
+  "admissionHeading": "Admission is now open for the new session.",
+  "schoolMotto": "Wisdom Is The Principal Thing",
+  "aboutParaOne": "Global Hilton International Academy is located at #15 Ikot Akpakang Road, Ibiaku Obio Ndobo, off Airport Road in Uruan LGA. Our campus was purpose-built — not converted from another use — with proper classroom blocks, a perimeter wall for safety, and space for children to learn and play without crowding.",
+  "locationHours": "Mon – Fri, 7:30am – 3:30pm",
   "statTwoLabel": "Govt. Approved",
   "statThreeNum": "1",
-  "statThreeLabel": "Purpose-Built Campus",
-
-  "admissionHeading": "Admission is now open for the new session.",
-  "admissionSubtext": "Spaces are limited at every level — secure your child's seat today.",
-
-  "uniformImage": "/images/uniform.jpg",
-  "uniformHeading": "School Uniform",
-  "uniformText": "Clean, simple and built for active children — white &amp; green sportswear with our school crest, worn with pride on and off the field.",
-
-  "galleryCampusHeading": "A look around Global Hilton",
   "galleryCampusText": "From classroom blocks to the perimeter wall — every part of our campus was built with your child's safety and comfort in mind.",
-  "galleryClassroomsHeading": "Bright rooms, ready to learn in",
+  "schoolName": "Global Hilton Int'l Academy",
   "galleryClassroomsText": "Every classroom is painted, furnished, and decorated to make young learners feel at home from day one.",
-
-  "locationSchoolName": "Global Hilton Int'l Academy",
-  "locationAddress": "#15 Ikot Akpakang Road, Ibiaku Obio Ndobo, Off Airport Road, Uruan LGA, Akwa Ibom State, Nigeria.",
-  "locationHours": "Mon – Fri, 7:30am – 3:30pm",
-
-  "footerAbout": "Building future leaders through knowledge and discipline. Creche, Nursery, Primary and Secondary education in Uruan LGA, Akwa Ibom State.",
-
-  "careersHeading": "Employment Opportunities",
-  "careersText": "We're always looking for passionate teachers and staff who share our commitment to nurturing young minds. If you're interested in working with us, send us your CV and we'll get in touch.",
-
-  "gallery": [
-    { "image": "/images/building2.jpg", "title": "Main classroom block" },
-    { "image": "/images/building1.jpg", "title": "Side wing" },
-    { "image": "/images/gate2.jpg", "title": "Front gate" },
-    { "image": "/images/classroom1.jpg", "title": "Classroom interior" },
-    { "image": "/images/building3.jpg", "title": "Roofline &amp; veranda" },
-    { "image": "/images/sink.jpg", "title": "Hygiene station" },
-    { "image": "/images/gate1.jpg", "title": "Perimeter wall" },
-    { "image": "/images/classroom3.jpg", "title": "Learning corner" },
-    { "image": "/images/interior1.jpg", "title": "Nursery classroom" },
-    { "image": "/images/interior9.jpg", "title": "Primary classroom" },
-    { "image": "/images/interior11.jpg", "title": "Classroom block" },
-    { "image": "/images/interior14.jpg", "title": "Creche classroom" },
-    { "image": "/images/interior15.jpg", "title": "Classroom block" },
-    { "image": "/images/interior16.jpg", "title": "Classroom &amp; whiteboard" },
-    { "image": "/images/interior2.jpg", "title": "Alphabet corner" },
-    { "image": "/images/interior8.jpg", "title": "Learning wall art" }
-  ]
+  "aboutParaTwo": "We run a full pathway from Early Childhood Education (Creche &amp; Nursery) through Primary, Junior Secondary and Senior Secondary School, so a child can grow with us from their very first day of school to graduation.",
+  "locationAddress": "#15 Ikot Akpakang Road, Ibiaku Obio Ndobo, Off Airport Road, Uruan LGA, Akwa Ibom State, Nigeria."
 }
